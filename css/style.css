@@ -49,30 +49,46 @@ body .body {
     background-image: url('../img/data_sci_background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* for parallax effect */
-    height: 100vh; /* or any other height you need */
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative; /* For potential overlay elements */
 }
 #about-me {
-    font-family: Arial, sans-serif;
-    font-size: 18px; /* Adjust font size */
-    line-height: 1.6; /* Improve line spacing */
-    color: #333; /* Set a darker color for readability */
-    max-width: 800px; /* Limit paragraph width */
-    margin: 20px auto; /* Center and add space around the paragraph */
-    padding: 20px; /* Add padding inside the paragraph container */
-    background-color: #f9f9f9; /* Light background for contrast */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-    text-align: justify; /* Justify text alignment */
-    margin-top: -30px; /* Move the text up */
+    font-family: 'Poppins', 'Inter', sans-serif; /* Modern font stack */
+    font-size: 20px; /* Slightly smaller for modern look */
+    line-height: 1.8; /* Increased line height for better readability */
+    color: #2d3748; /* More modern dark gray */
+    max-width: 900px; /* Slightly wider container */
+    margin: 40px auto; /* Increased vertical margin */
+    padding: 32px; /* More generous padding */
+    background-color: #ffffff; /* Clean white background */
+    border-radius: 12px; /* More pronounced rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06); /* Softer, more spread shadow */
+    text-align: left; /* Left alignment is more modern than justified */
+    margin-top: -50px; /* Increased negative margin for overlap effect */
+    border-left: 4px solid #3182ce;
+	letter-spacing: 0.01em; 
+}
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 30px; /* Modern spacing between flex items */
+}
+.highlight-blue {
+	color: #2563eb; /* Tailwind-ish blue, feels clean and modern */
+	text-decoration: none;
+	font-weight: 500;
 }
 
+  
 /* Begin Fonts */
 body {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Poppins', 'Inter', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto', Helvetica, Arial, sans-serif;
+	font-family: 'Poppins', 'Inter', sans-serif;
 	font-weight: 700;
 	margin-bottom: 10px;
 }
@@ -92,10 +108,10 @@ h5 {
 	font-size: 18px;
 }
 p {
-	font: 14px/1.5em "Roboto";
+	font: 14px/1.5em "Poppins";
 }
 .navbar-nav > li > a {
-	font-family: "Lato", Helvetica, Arial, sans-serif;
+	font-family: "Poppins", 'Inter', sans-serif;
 }
 /* End Fonts */
 
@@ -298,14 +314,19 @@ section {
 /* Begin text carousel intro */
 #text-carousel-intro-section {
 	height: 100%;
+	position: relative;
 }
 #text-carousel-intro-section .container {
 	height: 100%;
+	max-width: 1200px; /* Adjust based on your design */
+    margin: 0 auto;
+    position: relative; /* Add this for positioning context */
 }
 #text-carousel-intro-section .caption {
 	position: relative;
 	top: 50%;
 	margin-top: -70px;
+	max-width: 50
 }
 #text-carousel-intro-section .caption h1 {
 	margin-top: 0;
@@ -338,7 +359,7 @@ a.rotate-box-1, a.rotate-box-2 {
 	color: #363940;
 }
 a.rotate-box-1:hover, a.rotate-box-2:hover {
-	color: #676D75;
+	color: #687567;
 }
 .rotate-box-1 .rotate-box-icon {
 	display: inline-block;
@@ -488,10 +509,13 @@ a.rotate-box-1:hover, a.rotate-box-2:hover {
 
 /* Begin cta section */
 #cta-section {
-	padding: 70px 0 80px;
+	padding: 90px 0 100px;
+	background-color: white; /* Light background */
+	
 }
 .cta-btn {
-	margin-top: 30px;
+	margin-top: 20px;
+	
 }
 /* End cta section */
 ul {
@@ -499,21 +523,87 @@ ul {
     padding: 0; /* Removes default padding */
     display: flex; /* Flexbox for inline flow */
     flex-wrap: wrap; /* Allows multiple lines */
-    gap: 15px; /* Increased space between items */
+    gap: 12px; /* Increased space between items */
     justify-content: center; /* Optionally center the items horizontally */
 	margin-top: -20px;
+	
 }
 
 .skill {
-    background-color: #f2f2f2; /* Light gray background */
-    border: 1px solid #dcdcdc; /* Slight border */
-    border-radius: 8px; /* Slightly larger rounded corners */
+    background-color: white; /* Light gray background */
+    border: none; /* Slight border */
+    border-radius: 50px; /* Slightly larger rounded corners */
     padding: 10px 20px; /* Increased padding for larger boxes */
-    font-size: 1em; /* Larger font size for better readability */
-    color: #333; /* Darker font color */
+    font-size: 0.9em; /* Larger font size for better readability */
+    color: #2d3748; /* Darker font color */
     text-align: center; /* Center text alignment */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow for more depth */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Enhanced shadow for more depth */
+	
 }
+.experience-section {
+	border-left: 4px solid #3182ce;
+	background-color: white;
+}
+.experience-section h3 {
+    clear: both;
+    margin-top: 30px;
+	margin-bottom: 20px;
+} 
+.experience-list {
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 30px;
+	font-family: 'Poppins','Inter', sans-serif;
+	font-size: 20px;
+	color: #2d3748;
+	letter-spacing: 0.01em;
+	line-height: 1.8;
+}
+.experience-section ul li {
+    text-align: left;
+    text-indent: 0;
+    padding-left: 25px;
+    display: block !important; /* Override flex display */
+    width: 100%;
+	margin-bottom: 8px;
+}
+ul.skills-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: -20px;
+}
+.experience-section ul {
+    display: block !important; /* Override the flex display */
+    justify-content: flex-start !important;
+	margin-top: 0;
+}
+.experience-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a5568;
+	display: flex;
+	align-items: flex-start;
+}
+.experience-list li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: #3182ce;
+    border-radius: 50%;
+	flex-shrink: 0;
+}
+
 
 
 /* ===== Begin testimonial ===== */
